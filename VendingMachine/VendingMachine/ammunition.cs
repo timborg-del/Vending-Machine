@@ -4,19 +4,17 @@ using System.Text;
 
 namespace VendingMachine
 {
-    public class Hamburger : IProduct
+    public class Ammunition : IProduct
     {
-        string brand = "Nice Slice";
-        string name = "Double Flippin Chees";
-        readonly int price = 50;
-
-
-
+        string name = "9,5";
+        readonly int price = 300;
+        string brand = "Heavy Gun Bullets";
         public string Name { get { return name; } }
 
         public int Price { get { return price; } }
 
         public string Brand { get { return brand; } }
+
 
         public string Examine()
         {
@@ -25,14 +23,14 @@ namespace VendingMachine
 
         public string Purcase()
         {
-
-            return "";
+            string bullets = "You have purcase the Bullets";
+            return bullets;
         }
 
         public string Use()
         {
-            //just use it 
-            throw new NotImplementedException();
+           string useBullets = "You have used the bullets";
+           return useBullets; 
         }
     }
 }

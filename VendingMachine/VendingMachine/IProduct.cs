@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VendingMachine
 {
-    interface IProduct  
+   public interface IProduct  
     {
 
         public int Price { get; }
