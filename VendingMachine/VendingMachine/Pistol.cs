@@ -24,14 +24,15 @@ namespace VendingMachine
         }
         public string Purcase()
 
-        {            
-
-            return "";          
+        {
+            string boughtGun = "Now when you have you new TOOL";
+            return boughtGun;          
         }
 
         public string Use()
         {
-            return ""; 
+            string useGun = "You file the power";
+            return useGun; 
         }
 
 

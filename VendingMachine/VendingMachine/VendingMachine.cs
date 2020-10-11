@@ -15,6 +15,7 @@ namespace VendingMachine
 
         Pistol wholePackPistol = new Pistol(); // Access Propertys from objects. 
         Hamburger wholePackHamburger = new Hamburger();
+        Ammunition wholePackAmmuntions = new Ammunition();
 
 
         int[] acceptedCoins = { 1, 5, 10, 20, 50, 100, 500, 1000, };
@@ -23,7 +24,7 @@ namespace VendingMachine
         //there is onely one way to get input to a method and one way to get something out from a method: In parameter and out :
         public IProduct Choose(int button)
         { // Giving instruction to buttons
-            if (button < 1 || button > 2)
+            if (button < 1 || button > 3)
             {
                 throw new ArgumentException("Thats not Valid Button");
             }
@@ -42,6 +43,14 @@ namespace VendingMachine
                 return wholePackHamburger;
             
             }
+            else if (button == 3 && storedMony >= wholePackAmmuntions.Price)
+            {
+                storedMony = storedMony - wholePackAmmuntions.Price;
+                
+                return wholePackAmmuntions;
+            
+            }
+
             throw new ArgumentException("You cant afford this thing");
             //else
             //{
@@ -62,7 +71,7 @@ namespace VendingMachine
                 {
                     validCoin = true;
                     
-                    storedMony = userMony;                                                                                        
+                  storedMony = storedMony + userMony;                                                                                        
 
                     break;
                 }
@@ -110,15 +119,17 @@ namespace VendingMachine
         public string[] ShowAllProducts()
         {
 
+            
             Pistol pistol = new Pistol();
             Hamburger hamburger = new Hamburger();
-
+            Ammunition ammunition = new Ammunition();
+            string storeammunition = ammunition.Examine();
             string storeHamburgerShow = hamburger.Examine();
             string storePistolShow = pistol.Examine();
-            string[] storedItems = { storePistolShow, storeHamburgerShow };
+            string[] storedItems = new string[3];
             storedItems[0] = storePistolShow;
             storedItems[1] = storeHamburgerShow;
-
+            storedItems[2] = storeammunition;
 
             return storedItems;
 
@@ -132,11 +143,7 @@ namespace VendingMachine
                 return storedMony;
             }
 
-
-
         }
-
-
 
 
         // choose int:1 

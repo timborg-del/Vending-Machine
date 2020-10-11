@@ -25,14 +25,14 @@ namespace VendingMachine
 
         public string Purcase()
         {
-
-            return "";
+            string hamburger = "You have purcase Burger";
+            return hamburger;            
         }
 
         public string Use()
         {
-            //just use it 
-            throw new NotImplementedException();
+            string useHamburger = "Tasted like Death";
+            return useHamburger;
         }
     }
 }
