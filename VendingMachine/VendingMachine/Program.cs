@@ -8,6 +8,15 @@ namespace VendingMachine
         static void Main(string[] args)
         {
             //creating an object
+            
+            
+
+           // Pistol aPistol = new Pistol(800, "James", "DeserEagel");
+           // Console.WriteLine(aPistol.Examine());
+
+            //Hamburger newHamburger = new Hamburger(250, "DubbleTruble", "Burger");
+            //Console.WriteLine(newHamburger.Examine());
+
 
             VendingMachine vendingMachine = new VendingMachine();
             vendingMachine.ShowAllProducts();
@@ -19,9 +28,10 @@ namespace VendingMachine
             }
             try
             {
-                vendingMachine.InputMony(500);
-                vendingMachine.InputMony(500);
-                IProduct product = vendingMachine.Choose(1);
+                vendingMachine.InputMony(1000);
+
+                
+                IProduct product = vendingMachine.Choose(4);
                 string gunner = product.Use();
 
                 Console.WriteLine("You bought:" + product.Examine());  // Good thing about inheritench i can have a whole class in one veribal
@@ -34,14 +44,9 @@ namespace VendingMachine
                 Console.WriteLine(EX.Message);
             }
 
-            Console.WriteLine("Here is you Cange:" + vendingMachine.CashOut());
-
-
-
-
-
-
-
+            Console.WriteLine("Here is you Change:" + vendingMachine.CashOut());
+ 
+     
 
 
             /*

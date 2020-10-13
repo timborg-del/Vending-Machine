@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 
 namespace VendingMachine
 {
-    public class Hamburger : IProduct
+    class GunLicens : IProduct
     {
-        string brand = "Nice Slice";
-        string name = "Double Flippin Chees";
-        readonly int price = 50;
-
-
+        string brand;
+        string name;
+        int price;
 
         public string Name { get { return name; } }
 
         public int Price { get { return price; } }
-
+        
         public string Brand { get { return brand; } }
 
         public string Examine()
@@ -25,21 +25,21 @@ namespace VendingMachine
 
         public string Purcase()
         {
-            string hamburger = "You have purcase Burger";
-            return hamburger;            
+            string gunLicens = "You have bought the licens";
+            return gunLicens;
         }
 
         public string Use()
         {
-            string useHamburger = "Tasted like Death";
-            return useHamburger;
+            string useLicens = "You are now able to kill GL";
+            return useLicens;
         }
-        public Hamburger(int newprice, string newname, string newbrand)
+        public GunLicens(int newprice, string newname, string newbrand)
         {
             brand = newbrand;
             name = newname;
             price = newprice;
-        }
 
+        }
     }
 }

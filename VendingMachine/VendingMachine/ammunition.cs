@@ -32,5 +32,13 @@ namespace VendingMachine
            string useBullets = "You have used the bullets";
            return useBullets; 
         }
+        public Ammunition(int newPrice, string newName, string newBrand)
+        {
+            price = newPrice;
+            brand = newBrand;
+            name = newName;
+
+            
+        }
     }
 }

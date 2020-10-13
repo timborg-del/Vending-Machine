@@ -7,10 +7,10 @@ namespace VendingMachine
     public class Pistol : IProduct
     {
 
-       
+        
         string brand = "Magnum 9,5mm";
         string name = "The Golden Gun";
-        readonly int price = 750;
+        int price = 750;
 
         public int Price { get { return price; } }
         public string Brand { get { return brand; } }
@@ -28,14 +28,23 @@ namespace VendingMachine
             string boughtGun = "Now when you have you new TOOL";
             return boughtGun;          
         }
+        void dosomething()
+        {
+       
+        }
 
         public string Use()
         {
-            string useGun = "You file the power";
+            string useGun = "You feel the power";
             return useGun; 
         }
+        public Pistol(int newprice, string newbrand, string newname)
+        {
+            brand = newbrand;
+            name = newname;
+            price = newprice;
 
-
+        }
         
     }
 }
