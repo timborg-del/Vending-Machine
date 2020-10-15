@@ -14,8 +14,6 @@ namespace VendingMachine
 
 
 
-
-
         public VendingMachine()
         {
             allProducts.Add(new Pistol(800, "James", "Eagel"));
